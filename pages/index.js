@@ -8,10 +8,11 @@ export default function Home(props) {
         <h1>Home Page</h1>
         <ul>
         {props.products.map(e => (
-          <MovieCard key={e.id} title={e.title} year={e.releaseYear} rating={e.rating} />
+          <MovieCard key={e.id} id={e.id}  title={e.title} year={e.releaseYear} rating={e.rating} />
         ))}
       </ul>
       <button onClick={() => router.push('/genres')}>Browse Genres</button>
+      <button onClick={() => router.push('/movies')}>Show All Movies</button>
       </div>
     
   );
